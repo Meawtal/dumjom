@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MYWEB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body oncontextmenu="return false">
+  <div class="wrapper">
+    <form id="loginForm" autocomplete="off">
+      <h1>Login</h1>
+      <div class="form-group">
+        <input type="text" id="username" name="username" placeholder="Username" required />
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required />
+      </div>
+      <div id="error" style="color:red;"></div>
+      <br />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- crypto js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+  <!-- main login logic -->
+  <script src="login.js"></script>
+
+  <!-- ป้องกัน inspect -->
+  <script>
+    document.onkeydown = function (e) {
+      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "C", "J"].includes(e.key)) || (e.ctrlKey && e.key === "U")) {
+        return false;
+      }
+    };
+  </script>
+</body>
+</html>

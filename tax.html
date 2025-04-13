@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา</title>
+    <link rel="stylesheet" href="tax.css">
+</head>
+<body>
+
+<header>
+    <h1>เกี่ยวกับเรา</h1>
+</header>
+
+<div class="content">
+    <h2>คำนวณผลบวกเลข</h2>
+    <form id="calcForm">
+        <label for="num1">เลขที่ 1:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">เลขที่ 2:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <button type="submit" class="button">คำนวณ</button>
+    </form>
+    
+    <h3>ผลลัพธ์: <span id="result">0</span></h3>
+    
+    <a href="dashboard.html" class="button">WAEM</a>
+</div>
+
+<script>
+    // ถ้าไม่ได้ล็อกอินไว้ ให้ redirect กลับหน้า login
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+      alert("Hackerหรอ");
+      window.location.href = "web.html";
+    }
+  </script>
+
+<script src="dash.js"></script>
+
+</body>
+</html>
